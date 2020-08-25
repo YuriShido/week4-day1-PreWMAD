@@ -1,7 +1,15 @@
 // write a function that returns the longest name {first and last} in the given array of objects
 
 const LongestName = function(instructors) {
-  // Put your solution here
+  let FullName = [];
+  
+  for(i = 0; i < instructors.length; i++) {
+    FullName[i] = instructors[i].first + ' ' + instructors[i].last
+    // console.log(FullName[i])
+    } 
+    FullName.sort(function(a,b) { return b.length - a.length });
+    return FullName[0];
+    
 };
 
 console.log(LongestName([
